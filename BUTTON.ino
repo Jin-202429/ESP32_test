@@ -22,9 +22,13 @@ void loop() {
     ledState = !ledState;  // 아까 위에서 ledState = false라 선언했기 때문에 여기서는 false를 true로 바꾸는 것
 
     digitalWrite(LED_PIN1, ledState);  // 버튼을 누르면 경우 LED가 둘 다 켜짐
-    digitalWrite(LED_PIN2, ledState);  // LED1, LED2가 둘 다 동일한 상태이기 때문에 버튼을 누르면 켜지는 것을 할 수 있지만 LED 2개를 번갈아 켜고 싶다면 (LED_PIN2, !ledState)로 변경하면 됌
+    digitalWrite(LED_PIN2, ledState);  // LED1, LED2가 둘 다 동일한 상태이기 때문에 버튼을 누르면 켜지는 것을 할 수 있음
+    // LED 2개를 번갈아 켜고 싶다면 (LED_PIN2, !ledState)로 변경하면 됌
 
     while (digitalRead(BUTTON_PIN) == LOW); // 버튼이 HIGH로 바뀔 때까지 기다리기
     delay(50);  // 추가 디바운
   }
 }
+
+
+
